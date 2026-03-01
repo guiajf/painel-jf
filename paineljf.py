@@ -9,7 +9,7 @@ import json
 
 # Configuração da página
 st.set_page_config(
-    page_title="Painel enchentes Juiz de Fora",
+    page_title="Painel enchente Juiz de Fora",
     page_icon="🌧️",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -139,7 +139,7 @@ FORMAS_AJUDA = {
 
 def main():
     # Header
-    st.markdown('<h1 class="main-header">🌧️ Dashboard - Enchentes em Juiz de Fora</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">🌧️ Painel: enchentes em Juiz de Fora</h1>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Monitoramento em tempo real da tragédia na Zona da Mata Mineira</p>', unsafe_allow_html=True)
     
     # Alerta de atualização
@@ -224,7 +224,7 @@ def main():
         st.plotly_chart(fig, use_container_width=True)
 
     with col_right:
-        st.subheader("🗺️ Cidades em Estado de Calamidade")
+        st.subheader("🗺️ Cidades em estado de calamidade")
         
         cidades_data = {
             'Cidade': ['Juiz de Fora', 'Ubá', 'Cataguases', 'Leopoldina', 'Muriaé', 'Viçosa'],
@@ -241,7 +241,7 @@ def main():
 
     # Seção de notícias
     st.markdown("---")
-    st.subheader("📰 Últimas Notícias")
+    st.subheader("📰 Últimas notícias")
     
     cols = st.columns(2)
     for idx, noticia in enumerate(NOTICIAS):
@@ -274,18 +274,18 @@ def main():
             </div>
             """, unsafe_allow_html=True)
         
-        st.markdown("### 📍 Locais de Doação")
+        st.markdown("### 📍 Locais de doação")
         for local in FORMAS_AJUDA['locais_doacao']:
             st.markdown(f"- {local}")
     
     with col_ajuda2:
-        st.markdown("### 📦 Itens Mais Necessários")
+        st.markdown("### 📦 Itens mais necessários")
         itens_cols = st.columns(2)
         for idx, item in enumerate(FORMAS_AJUDA['itens_necessarios']):
             with itens_cols[idx % 2]:
                 st.markdown(f"<div style='padding: 8px; background-color: #f5f5f5; margin: 5px 0; border-radius: 5px;'>✓ {item}</div>", unsafe_allow_html=True)
         
-        st.markdown("### 🚨 Contatos Importantes")
+        st.markdown("### 🚨 Contatos importantes")
         st.markdown("""
         - **Defesa Civil Juiz de Fora:** (32) 3690-8000
         - **Corpo de Bombeiros:** 193
@@ -294,20 +294,20 @@ def main():
         """)
 
     # Informações adicionais
-    with st.expander("ℹ️ Informações Detalhadas sobre a Tragédia"):
+    with st.expander("ℹ️ Informações detalhadas sobre a tragédia"):
         st.markdown("""
         ### Contexto
         As chuvas que atingiram Juiz de Fora e região entre os dias 23 e 24 de fevereiro de 2026 foram históricas. 
         O município registrou dois dos cinco dias mais chuvosos de sua história, com precipitações que superaram 
         os 150 mm em poucas horas.
         
-        ### Dados Técnicos
+        ### Dados técnicos
         - **População em área de risco:** 128.946 pessoas (23,7% da população total)
         - **Posição no ranking nacional:** 9ª cidade com mais moradores em áreas de risco
         - **Investimentos anunciados:** R$ 38 milhões (Juiz de Fora) + R$ 8 milhões (Ubá)
         - **Tempo de buscas:** Aproximadamente 120 horas de operação contínua
         
-        ### Bairros Mais Atingidos
+        ### Bairros mais atingidos
         - Paineiras (onde ocorreram a maioria dos deslizamentos)
         - Morro do Imperador
         - Costa Carvalho
