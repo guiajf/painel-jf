@@ -9,7 +9,7 @@ import json
 
 # Configuração da página
 st.set_page_config(
-    page_title="Dashboard - Enchentes Juiz de Fora",
+    page_title="Painel enchentes Juiz de Fora",
     page_icon="🌧️",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -323,7 +323,7 @@ def main():
     st.markdown("---")
     st.markdown("""
     <div style="text-align: center; color: #666; padding: 20px;">
-        <p>Dashboard atualizado automaticamente | Fontes: Defesa Civil de MG, G1, Agência Brasil, O Tempo</p>
+        <p>Painel atualizado automaticamente | Fontes: Defesa Civil de MG, G1, Agência Brasil, O Tempo</p>
         <p style="font-size: 0.8rem;">Desenvolvido para fins informativos. Sempre confirme informações oficiais.</p>
     </div>
     """, unsafe_allow_html=True)
