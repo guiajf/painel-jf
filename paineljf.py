@@ -156,7 +156,7 @@ def main():
     
     with col1:
         st.metric(
-            label="😢 Mortes Confirmadas",
+            label="😢 Mortes confirmadas",
             value=DADOS_ATUALIZADOS['mortos'],
             delta="+16 desde 25/02",
             delta_color="inverse"
@@ -172,7 +172,7 @@ def main():
     
     with col3:
         st.metric(
-            label="🏠 Desabrigados/Desalojados",
+            label="🏠 Desabrigados/desalojados",
             value=f"{DADOS_ATUALIZADOS['desabrigados']:,}".replace(",", "."),
             delta="8.584 pessoas",
             delta_color="off"
@@ -190,7 +190,7 @@ def main():
     col_left, col_right = st.columns(2)
     
     with col_left:
-        st.subheader("📊 Evolução das Vítimas")
+        st.subheader("📊 Evolução das vítimas")
         
         # Dados para o gráfico de evolução
         datas = ['25/02', '26/02', '27/02', '28/02', '01/03']
